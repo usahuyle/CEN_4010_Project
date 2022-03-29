@@ -19,32 +19,32 @@ const connection = mysql.createConnection({
 
 app.get("/", (req,res)=>{
 
-    res.sendFile(__dirname + "/Front-end/htmlPages/login.html");
+    res.sendFile(__dirname + "/Front-end/login.html");
 
 })
 
 app.get("/login.html", (req,res)=>{
 
-    res.sendFile(__dirname + "/Front-end/htmlPages/login.html");
+    res.sendFile(__dirname + "/Front-end/login.html");
 
 })
 
 
 app.get("/register.html", (req,res)=>{
 
-    res.sendFile(__dirname + "/Front-end/htmlPages/register.html");
+    res.sendFile(__dirname + "/Front-end/register.html");
 
 })
 
 app.get("/index.html", (req,res)=>{
 
-    res.sendFile(__dirname + "/Front-end/htmlPages/index.html");
+    res.sendFile(__dirname + "/Front-end/dashboard.html");
 
 })
 
 app.get("/register.html", (req,res)=>{
 
-    res.sendFile(__dirname + "/Front-end/htmlPages/password.html");
+    res.sendFile(__dirname + "/Front-end/password.html");
 
 })
 //Closing connection to database
