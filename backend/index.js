@@ -5,6 +5,9 @@ const app = express();
 //Setting up connection to AWS RDS database
 const mysql = require("mysql");
 
+//Setting up static folder
+app.use(express.static("Front-end"));
+
 const connection = mysql.createConnection({
     host     : "database-1.cjwufjoqjxuz.us-east-1.rds.amazonaws.com",
     user     : "admin",
@@ -14,8 +17,36 @@ const connection = mysql.createConnection({
 })
 
 
+app.get("/", (req,res)=>{
+
+    res.sendFile(__dirname + "/Front-end/htmlPages/login.html");
+
+})
+
+app.get("/login.html", (req,res)=>{
+
+    res.sendFile(__dirname + "/Front-end/htmlPages/login.html");
+
+})
 
 
+app.get("/register.html", (req,res)=>{
+
+    res.sendFile(__dirname + "/Front-end/htmlPages/register.html");
+
+})
+
+app.get("/index.html", (req,res)=>{
+
+    res.sendFile(__dirname + "/Front-end/htmlPages/index.html");
+
+})
+
+app.get("/register.html", (req,res)=>{
+
+    res.sendFile(__dirname + "/Front-end/htmlPages/password.html");
+
+})
 //Closing connection to database
 connection.end();
 
