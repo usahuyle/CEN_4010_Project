@@ -9,7 +9,7 @@ const mysql = require("mysql");
 app.use(express.static("Front-end"));
 
 const connection = mysql.createConnection({
-    host     : "database-1.cjwufjoqjxuz.us-east-1.rds.amazonaws.com",
+    host     : "",
     user     : "admin",
     password : "westboca2022",
     port     : "3307",
