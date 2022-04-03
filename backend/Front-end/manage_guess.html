@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+        body {
+
+            background-color: black;
+
+        }
+
+        .container {
+
+            background-color: rgb(250, 235, 150);
+
+            border-radius: 4px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="color: red; text-decoration: underline; text-decoration-color:red;font-family:monospace"
+        class="text-center">Senior Citizen
+
+        Parking</h1>
+
+    <div class="container my-5">
+
+        <form class="my-3" action="#" onsubmit="false">
+
+            <div class="input-group mb-3 ">
+
+                <span class="input-group-text" id="basic-addon3">First Name</span>
+
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+
+            </div>
+
+            <div class="input-group mb-3">
+
+                <span class="input-group-text" id="basic-addon3">Last Name</span>
+
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+
+            </div>
+
+            <span>Are you a senior citizen: </span>
+
+            <div class="form-check">
+
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+
+                <label class="form-check-label" for="flexRadioDefault1">
+
+                    YES
+
+                </label>
+
+            </div>
+
+            <div class="form-check">
+
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+
+                <label class="form-check-label" for="flexRadioDefault2">
+
+                    NO
+
+                </label>
+
+            </div>
+
+            <br><br>
+
+            <input style="background-color: skyblue; font-weight: 500;" type="submit" value="Submit"
+                onclick="generate()">
+
+        </form>
+
+        <br>
+
+        <span>Your parking ticket number is: </span>
+
+        <span style=" color: rgb(202, 0, 0)" id="park"></span>
+
+        <p id="done"></p>
+
+    </div>
+
+
+
+
+
+    <script>
+
+        function generate() {
+
+            console.log("called ")
+
+            // console.log();
+
+            document.getElementById("park").style.display;
+
+            var id = Math.floor(Math.random() * 1000);
+
+            console.log(id);
+
+            document.getElementById("park").innerHTML = id;
+
+            document.getElementById("done").innerHTML = "DONE";
+
+        };
+
+    </script>
+
+</body>
+
+</html>
