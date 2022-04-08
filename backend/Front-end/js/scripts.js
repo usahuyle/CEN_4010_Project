@@ -6,6 +6,8 @@
     // 
 // Scripts
 // 
+let events = JSON.parse(sessionStorage.getItem("events"));
+let eventBody = document.getElementById("eventBody");
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -22,5 +24,15 @@ window.addEventListener('DOMContentLoaded', event => {
             localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
         });
     }
+    
+    if(events.length == 0)
+    {
 
+    }else{
+        document.getElementById("userLogged").innerText = events[0].user; 
+        eventBody.innerHTML = events.map((item)=>{
+            return ("<tr><td>"+ item.name + "</td><td>" + item.dateOfEvent + "</td><td>" + item.description + "</td></tr>");
+    });
+    }
 });
+
