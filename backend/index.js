@@ -142,6 +142,12 @@ app.post("/register",(req,res)=>{
 })
 
 //Setting up the backend to listen on a specific port
-app.listen(3000, ()=>{
-    console.log("Server listening on port 3000...");
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, ()=>{
+    console.log("Server has started succesfully");
 })
