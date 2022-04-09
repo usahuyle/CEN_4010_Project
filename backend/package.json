@@ -8,6 +8,9 @@
   },
   "author": "David Vega",
   "license": "ISC",
+  "engines": {
+    "node": "16.13.2"
+  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "express": "^4.17.3",
