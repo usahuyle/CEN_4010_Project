@@ -11,7 +11,7 @@ login.addEventListener("submit",evt => {
 
     new FormData(login).forEach((value,key)=>o[key] = value)
 
-    fetch("http://localhost:3000/login",{
+    fetch("https://sleepy-headland-47076.herokuapp.com/login",{
         method: "POST",
         headers:{
             'Content-Type': 'application/json'
