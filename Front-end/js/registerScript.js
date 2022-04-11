@@ -6,7 +6,7 @@ registerForm.addEventListener("submit", (evt)=>{
     new FormData(registerForm).forEach((value,key)=>o[key] = value)
     
     
-    fetch("http://localhost:3000/register",{
+    fetch("https://sleepy-headland-47076.herokuapp.com/register",{
         method: "POST",
         headers:{
             'Content-Type': 'application/json'
